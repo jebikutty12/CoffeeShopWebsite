@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Shop</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">☕ Coffee</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">User</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Text -->
+        <div class="col-md-6">
+          <h4 class="best-coffee">Best Coffee</h4>
+          <h1>Make your day great with our special coffee!</h1>
+          <p>Welcome to our coffee paradise where every bean tells a story and every cup sparks joy.</p>
+          <a href="#" class="btn btn-order">Order Now</a>
+          <a href="#" class="btn btn-contact">Contact Us</a>
+        </div>
+        <!-- Right Image -->
+        <div class="col-md-6 text-center">
+          <img src="images/coffee-hero-section.png" alt="Coffee Cup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <img src="images/about-image.jpg" alt="About Us" class="about-img">
+        </div>
+        <div class="col-md-6">
+          <h2 class="about-title">ABOUT US</h2>
+          <p class="about-text">
+            At Coffee House in Berndorf, Germany, we pride ourselves on being a go-to destination for coffee lovers and conversation seekers alike. We’re dedicated to providing an exceptional coffee experience in a cozy and inviting atmosphere.
+          </p>
+          <div class="about-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="container text-center">
+      <h2 class="menu-title">OUR MENU</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="images/hot-beverages.png" alt="Hot Beverages" class="menu-img">
+          <h4 class="menu-item-title">Hot Beverages</h4>
+          <p class="menu-item-text">Wide range of steaming hot coffee to make you fresh and light.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/cold-beverages.png" alt="Cold Beverages" class="menu-img">
+          <h4 class="menu-item-title">Cold Beverages</h4>
+          <p class="menu-item-text">Creamy and frothy cold coffee to make you cool.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/refreshment.png" alt="Refreshment" class="menu-img">
+          <h4 class="menu-item-title">Refreshment</h4>
+          <p class="menu-item-text">Fruit and icy refreshing drinks to make you feel refreshed.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="images/special-combo.png" alt="Special Combos" class="menu-img">
+          <h4 class="menu-item-title">Special Combos</h4>
+          <p class="menu-item-text">Your favorite eating and drinking combinations.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/desserts.png" alt="Desserts" class="menu-img">
+          <h4 class="menu-item-title">Desserts</h4>
+          <p class="menu-item-text">Satiate your palate and enjoy a culinary treat.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/burger-frenchfries.png" alt="Burgers and French Fries" class="menu-img">
+          <h4 class="menu-item-title">Burgers and French Fries</h4>
+          <p class="menu-item-text">Quick bites to satisfy a small hunger.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5">TESTIMONIALS</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <img src="images/user-1.jpg" alt="James Wilson" class="rounded-circle mb-4" width="160" height="160">
+                <h6 class="fw-bold">James Wilson</h6>
+                <p><em>"Great espresso blend! Smooth and bold flavor. Fast shipping too!"</em></p>
+              </div>
+              <div class="col-md-4">
+                <img src="images/user-2.jpg" alt="Michael Brown" class="rounded-circle mb-4" width="160" height="160">
+                <h6 class="fw-bold">Michael Brown</h6>
+                <p><em>"Fantastic mocha flavor. Fresh and aromatic. Quick shipping!"</em></p>
+              </div>
+              <div class="col-md-4">
+                <img src="images/user-3.jpg" alt="Emily Harris" class="rounded-circle mb-4" width="160" height="160">
+                <h6 class="fw-bold">Emily Harris</h6>
+                <p><em>"Excellent quality! Fresh beans and quick delivery. Highly recommend."</em></p>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <img src="images/user-4.jpg" alt="Sophia Lee" class="rounded-circle mb-4" width="160" height="160">
+                <h6 class="fw-bold">Sophia Lee</h6>
+                <p><em>"Best café in town! Cozy vibes and great drinks."</em></p>
+              </div>
+              <div class="col-md-4">
+                <img src="images/user-5.jpg" alt="Oliver White" class="rounded-circle mb-4" width="160" height="160">
+                <h6 class="fw-bold">Oliver White</h6>
+                <p><em>"Love the cold brew! Super refreshing."</em></p>
+              </div>
+              <div class="col-md-4">
+                <img src="images/user-3.jpg" alt="Liam Smith" class="rounded-circle mb-4" width="160" height="160">
+                <h6 class="fw-bold">Liam Smith</h6>
+                <p><em>"Always fresh beans and fast delivery!"</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <!-- Gallery -->
+<section id="gallery" class="gallery-section py-5">
+  <div class="container text-center">
+    <h2 class="mb-5">GALLERY</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="images/gallery-1.jpg" class="img-fluid rounded gallery-img" alt="Gallery 1">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="images/gallery-2.jpg" class="img-fluid rounded gallery-img" alt="Gallery 2" height="200">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="images/gallery-3.jpg" class="img-fluid rounded gallery-img" alt="Gallery 3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="images/gallery-4.jpg" class="img-fluid rounded gallery-img" alt="Gallery 4">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="images/gallery-5.jpg" class="img-fluid rounded gallery-img" alt="Gallery 5">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="images/gallery-6.jpg" class="img-fluid rounded gallery-img" alt="Gallery 6">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

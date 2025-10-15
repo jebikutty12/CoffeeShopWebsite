@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg-color: #f3eee8;
+      --shadow-dark: #d2c8c0;
+      --shadow-light: #ffffff;
+      --primary: #6b4c3b;
+      --accent: #d4a373;
+    }
+
+    body {
+      margin: 0;
+      background: url("images/coffee.avif") no-repeat center center/cover;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-wrapper {
+      background: #d4a373;
+      border-radius: 20px;
+      box-shadow: 10px 10px 25px var(--accent),
+                  -10px -10px 25px var(--accent);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 30px;
+      max-width: 850px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+    }
+
+    .login-image {
+      flex: 1 1 300px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .login-image img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .login-form {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .login-form h2 {
+      color: var(--primary);
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .neumorphic-input {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 12px;
+      background: var(--bg-color);
+      box-shadow: inset 5px 5px 12px var(--shadow-dark),
+                  inset -5px -5px 12px var(--shadow-light);
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .neumorphic-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--accent);
+    }
+
+    .neumorphic-button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 5px 5px 12px #c79867,
+                  -5px -5px 12px #f7d0a3;
+      transition: 0.3s ease-in-out;
+    }
+
+    .neumorphic-button:hover {
+      background: #b97d4f79;
+      transform: scale(1.03);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .login-wrapper {
+        flex-direction: column;
+      }
+      .login-image {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <!-- Image Column -->
+    <div class="login-image">
+      <img src="images/hot-beverages.png" alt="Admin Coffee">
+    </div>
+
+    <!-- Admin Login Form -->
+    <form action="admindashboard.html" class="login-form">
+      <h2><i class="bi bi-shield-lock-fill"></i> Admin Login</h2>
+      <input type="text" class="neumorphic-input" placeholder="Admin Username" required />
+      <input type="password" class="neumorphic-input" placeholder="Password" required />
+      <button type="submit" class="neumorphic-button">Login</button>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

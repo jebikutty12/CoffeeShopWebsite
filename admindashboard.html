@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Coffee Shop</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f8f5f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .sidebar {
+      background-color: #4b2e2e;
+      min-height: 100vh;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #7b4f36;
+      border-left: 5px solid #f4c06a;
+    }
+
+    .dashboard-header {
+      background-color: #ffffff;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .add-product-form input,
+    .add-product-form textarea,
+    .add-product-form button {
+      margin-bottom: 15px;
+    }
+
+    .dashboard-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        min-height: auto;
+      }
+    }
+
+    .neumorphic {
+      background: #e0e5ec;
+      border-radius: 20px;
+      box-shadow: 10px 10px 20px #a3b1c6, -10px -10px 20px #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 sidebar d-none d-md-block">
+        <div class="text-center mb-4">
+          <h4>☕ Admin</h4>
+        </div>
+        <a href="#" class="nav-link active" onclick="showSection('dashboardSection', event)">
+          <i class="bi bi-house-door"></i> Dashboard
+        </a>
+        <a href="#" class="nav-link" onclick="showSection('addProductSection', event)">
+          <i class="bi bi-plus-square"></i> Add Product
+        </a>
+        <a href="#" class="nav-link" onclick="showSection('menuItemsSection', event)">
+          <i class="bi bi-cup-straw"></i> Menu Items
+        </a>
+        <a href="#" class="nav-link" onclick="showSection('usersSection', event)">
+          <i class="bi bi-people"></i> Users
+        </a>
+        <a href="#" class="nav-link" onclick="showSection('ordersSection', event)">
+          <i class="bi bi-basket"></i> Orders
+        </a>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="col-md-10 ms-sm-auto px-md-4">
+        <section class="dashboard-image-section text-center mb-5">
+  <div class="neumorphic p-4 mt-3 d-flex align-items-center justify-content-center gap-3 flex-wrap">
+    <img src="images/coffee-hero-section.png" class="img-fluid rounded" alt="Coffee Dashboard" style="max-height: 60px;">
+    <h2 class="m-0">Welcome to Coffee Admin Panel</h2>
+  </div>
+</section>
+
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="section active">
+          <div class="my-4">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Coffee Shop"
+              class="dashboard-image" />
+          </div>
+
+          <div class="row my-4">
+            <div class="col-md-4">
+              <div class="card p-3">
+                <h5>Total Products</h5>
+                <h3>120</h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card p-3">
+                <h5>Orders Today</h5>
+                <h3>35</h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card p-3">
+                <h5>New Users</h5>
+                <h3>8</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Product Section -->
+        <div id="addProductSection" class="section">
+          <div class="card p-4 my-4">
+            <h4 class="mb-3">Add New Product</h4>
+            <form class="add-product-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Product Name" required />
+                </div>
+                <div class="col-md-6">
+                  <input type="number" class="form-control" placeholder="Price" required />
+                </div>
+              </div>
+              <textarea class="form-control" rows="3" placeholder="Product Description" required></textarea>
+              <input type="file" class="form-control" />
+              <button class="btn btn-dark mt-2" type="submit">Add Product</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Menu Items Section -->
+        <div id="menuItemsSection" class="section">
+          <div class="card p-4 my-4">
+            <h4>Menu Items</h4>
+            <p>Display menu items here...</p>
+          </div>
+        </div>
+
+        <!-- Users Section -->
+        <div id="usersSection" class="section">
+          <div class="card p-4 my-4">
+            <h4>Registered Users</h4>
+            <p>List of users will go here...</p>
+          </div>
+        </div>
+
+        <!-- Orders Section -->
+        <div id="ordersSection" class="section">
+          <div class="card p-4 my-4">
+            <h4 class="mb-3">Recent Orders</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Product</th>
+                  <th>Customer</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#001</td>
+                  <td>Espresso</td>
+                  <td>Jane Doe</td>
+                  <td><span class="badge bg-success">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>#002</td>
+                  <td>Latte</td>
+                  <td>John Smith</td>
+                  <td><span class="badge bg-warning">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Section Toggle Script -->
+  <script>
+    function showSection(id, event) {
+      event.preventDefault();
+
+      // Hide all sections
+      document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+
+      // Show selected section
+      const selected = document.getElementById(id);
+      if (selected) selected.classList.add('active');
+
+      // Update active link styling
+      document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+      event.target.closest('a').classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
